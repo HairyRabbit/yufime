@@ -26,8 +26,7 @@ function getPostContentByTitle(scoreData) {
 	var score = scoreData;
 	var posts = scoreData["posts"];
 	_.each(posts, function(n, i, l) {
-		var title = n["title"].split(' ').join('_');
-		n["text"] = md.toHTML(fs.readFileSync('./public/posts/' + title + '.md', 'utf8'));
+		n["text"] = md.toHTML(fs.readFileSync('./public/posts/' + n["alias"] + '.md', 'utf8'));
 	});
 	return score;
 }
@@ -42,11 +41,6 @@ router.get('/posts', function(req, res) {
 router.get('/posts/:id', function(req, res) {
 	var id = req.params.id;
 	jsonFindOneById("posts", req.params.id, function(data) {
-		// var title = scoreData["posts"][0].title.split(' ').join('_');
-		// fs.readFile('./public/posts/' + title + '.md', function(data) {
-		// 	scoreData["posts"][0].text = md.toHTML(fs.readFileSync('./public/posts/' + title + '.md', 'utf8'));
-		// 	res.send(scoreData);
-		// });
 		res.send(getPostContentByTitle(data));
 	});
 });
