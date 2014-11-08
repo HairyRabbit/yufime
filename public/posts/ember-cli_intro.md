@@ -10,32 +10,32 @@ ember-cli 简介
 
 `$ ember new someapp`
 
-![new](img\ember-cli_介绍_images\new.png)
+![new](img\ember-cli_intro\new.png)
 
 使用ember-cli可以使预览自动化：（修改代码之后自动更改）
 
 `$ ember serve`
 
-![serve](img\ember-cli_介绍_images\serve.png)
+![serve](img\ember-cli_intro\serve.png)
 
 使用 ember-cli 可是自动创建模板，不需要再自己写繁琐的 
 *var obj = Ember.object.extend()* ：
 
 `$ ember generate route index`
 
-![generate](img\ember-cli_介绍_images\generate.png)
+![generate](img\ember-cli_intro\generate.png)
 
 使用ember-cli可以使单元测试自动化：
 
 `$ ember test`
 
-![test](img\ember-cli_介绍_images\test.png)
+![test](img\ember-cli_intro\test.png)
 
 使用ember-cli可以方便打包发布代码：
 
 `$ ember build`
 
-![build](img\ember-cli_介绍_images\build.png)
+![build](img\ember-cli_intro\build.png)
 
 安装 ember-cli
 ----------------
@@ -59,19 +59,19 @@ ember-cli工具的安装是通过npm包管理器去安装的，所以在之前�
 
 `$ ember version`
 
-![version](img\ember-cli_介绍_images\version.png)
+![version](img\ember-cli_intro\version.png)
 
 可以看到当前版本是0.1.2(2014-10-31)。使用help可以查看帮助：
 
 `$ ember help`
 
-![help](img\ember-cli_介绍_images\help.png)
+![help](img\ember-cli_intro\help.png)
 
 使用 ember new 创建新项目
 --------------
 就像之前介绍中提到的，可以使用**ember new**来创建新的项目：
 
-![new](img\ember-cli_介绍_images\new.png)
+![new](img\ember-cli_intro\new.png)
 
 这个命令会自动执行下面俩条命令安装依赖：
 
@@ -83,7 +83,7 @@ ember-cli工具的安装是通过npm包管理器去安装的，所以在之前�
 
 执行命令之后我们生成了一些目录和文件，这就是ember的工作目录：
 
-![lists](img\ember-cli_介绍_images\lists.png)
+![lists](img\ember-cli_intro\lists.png)
 
 app目录：这个目录是我们存放代码的地方；
 
@@ -123,7 +123,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 `$ ember serve`
 
-![serve](img\ember-cli_介绍_images\serve.png)
+![serve](img\ember-cli_intro\serve.png)
 
 就像图中所示，项目会默认使用 localhost 本机启动，端口是 4200 。如果不想使用默认的地址和端口，可以在启动时指定：
 
@@ -133,7 +133,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 我们在浏览器中输入 http://localhost:4200/ ，可以看到我们的项目成功启动了，同时在页面中可以看到Welcome to Ember.js：
 
-![welcome](img\ember-cli_介绍_images\welcome.png)
+![welcome](img\ember-cli_intro\welcome.png)
 
 我们查看网页的源代码：
 
@@ -153,7 +153,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 在修改保存之后，我们看到shell中的变化：
 
-![servechange](img\ember-cli_介绍_images\servechange.png)
+![servechange](img\ember-cli_intro\servechange.png)
 
 同时我们看到浏览器中也相应产生了变化。这个功能是用websocket支持的，所以在开发过程尽量选用支持websocket的浏览器，比如firefox、chrome，ie8不支持websocket所以会报错，但这并不是说ember不支持ie8。
 
@@ -172,17 +172,17 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 `$ ember generate template index`
 
-![templateindex](img\ember-cli_介绍_images\templateindex.png)
+![templateindex](img\ember-cli_intro\templateindex.png)
 
 **注意：并不需要在执行ember serve那个shell中执行这条命令，这样会先关掉服务之后还要再启动。可以新打开一个shell执行他**
 
 我们看到提示说创建了一个文件在app/templates/index.hbs，找到并打开它。里面是空的，我们加些东西进去：
 
-![templateindexcontent](img\ember-cli_介绍_images\templateindexcontent.png)	
+![templateindexcontent](img\ember-cli_intro\templateindexcontent.png)	
 
 保存片刻之后，我们看到浏览器有了我们刚刚输入的表格：
 
-![ffindex](img\ember-cli_介绍_images\ffindex.png)	
+![ffindex](img\ember-cli_intro\ffindex.png)	
 
 现在我们新建一个用户的模型，名称是user：
 
@@ -190,7 +190,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 **注意：ember中模型的单数复数关系，这里定义模型应该用单数user，不是users**
 
-![modeluser](img\ember-cli_介绍_images\modeluser.png)	
+![modeluser](img\ember-cli_intro\modeluser.png)	
 
 可以看到，除了新生成的文件还创建了一个文件在tests文件夹下，这个文件是编写单元测试用的。
 
@@ -216,7 +216,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 `$ ember generate route index`
 
-![routeindex](img\ember-cli_介绍_images\routeindex.png)
+![routeindex](img\ember-cli_intro\routeindex.png)
 
 这里他会询问你是否要重写index.hbs模板，因为这个我们已经之前修改好了，所以现在输入n，表示否。
 
@@ -236,7 +236,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 保存之后我们看到浏览器中报错了：
 
-![routeerror](img\ember-cli_介绍_images\routeerror.png)
+![routeerror](img\ember-cli_intro\routeerror.png)
 
 这里向服务器/users请求数据却报了404的错，当然，我们还没有写这部分逻辑。下面我们添加一个server：
 
@@ -244,7 +244,7 @@ Brocfile.js：用来配置broccoli， 这个文件相当于Grunt的Gruntfile.js�
 
 **注意：这个api换过很多次了，之前使用的是api-stub。**
 
-![mockusers](img\ember-cli_介绍_images\mockusers.png)
+![mockusers](img\ember-cli_intro\mockusers.png)
 
 我们在server/mocks找到他，在这里我们先手写几条静态数据：
 
