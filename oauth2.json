@@ -1,0 +1,7 @@
+{
+	"github": {
+		"client_id": "feebf3fa280163233841",
+		"client_secret": "59934d670b0374eecd8e9364726774e3de8dedcf",
+		"redirect_uri": "http://localhost:4200"
+	}
+}
