@@ -309,7 +309,7 @@ pre, code, strong {
 .fr {
   float: right; }
 
-.posr {
+.posr, main h2:before {
   position: relative; }
 
 .posa {
@@ -351,7 +351,7 @@ pre, code, strong {
 .z9999 {
   z-index: 9999; }
 
-.dib, pre, code, strong, .comment__replyBtn {
+.dib, main h2:before, pre, code, strong, .comment__replyBtn {
   display: inline-block; }
 
 .db {
@@ -394,13 +394,13 @@ pre, code, strong {
 .bdrz, pre, code, strong {
   border-radius: 4px; }
 
-.bdrc {
+.bdrc, main h2:before {
   border-radius: 50%; }
 
 .bd1 {
   border: 1px solid #ddd; }
 
-.fwb, main h2 {
+.fwb {
   font-weight: 600; }
 
 .fwn, pre, code, strong {
@@ -415,7 +415,7 @@ pre, code, strong {
 .fsn {
   font-style: normal; }
 
-.fz08 {
+.fz08, pre {
   font-size: 0.8em; }
 
 .fz1 {
@@ -454,7 +454,7 @@ pre, code, strong {
 .fzp12 {
   font-size: 12px; }
 
-.fzp24 {
+.fzp24, main h2 {
   font-size: 24px; }
 
 .fzp36 {
@@ -550,7 +550,7 @@ pre, code, strong {
 .bgcccc {
   background-color: #ccc; }
 
-.bgcddd {
+.bgcddd, main h2:before {
   background-color: #ddd; }
 
 .bgceee {
@@ -581,13 +581,13 @@ img.full {
 .cup {
   cursor: pointer; }
 
-.cud {
+.cud, main h2 {
   cursor: default; }
 
 .ovh {
   overflow: hidden; }
 
-.trans, .comment__replyBtn, .comment__replyBtn.active {
+.trans, main h2, main h2:before, main h2:hover, main h2:hover:before, .comment__replyBtn, .comment__replyBtn.active {
   transition: all 0.4s ease-in-out; }
 
 .boxsd {
@@ -649,14 +649,25 @@ header {
     width: 40px;
     margin-left: 0.5em; }
   header .header__menu {
-    margin-right: 0.5em; }
+    padding: 5px; }
 
 main {
   padding-top: 50px;
   overflow-x: hidden; }
-  main img {
-    width: 100%;
-    height: auto; }
+  main h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px dotted transparent; }
+    main h2:before {
+      content: ' ';
+      width: 1em;
+      height: 1em;
+      top: 4px;
+      margin-right: 0.5em; }
+    main h2:hover {
+      border-bottom: 1px dotted dodgerblue;
+      color: dodgerblue; }
+      main h2:hover:before {
+        background-color: dodgerblue; }
 
 pre, code {
   background-color: gainsboro; }

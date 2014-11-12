@@ -1,11 +1,13 @@
 {
-	"posts": [
+	"comments": [
 		{
 			"id": 1,
-			"title": "ember-cli 介绍",
+			"name": "yufi",
+			"photo": "2014-10-15",
+			"text": "一个ember-cli入手的超超简单教程，版本号是1.2.0",
 			"date": "2014-10-15",
-			"intro": "一个ember-cli入手的超超简单教程，版本号是1.2.0",
-			"keywords": [1, 2]
+			"replies": [],
+			"post": 1
 		}
 	]
 }

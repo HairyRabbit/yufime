@@ -19,7 +19,7 @@ app.engine('html', require('ejs').renderFile);
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
-app.use(cors());
+// app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

@@ -25,8 +25,9 @@ config.github = {
 	},
 	getUserInfo: function(content) {
 		content = JSON.parse(content);
+		console.log(content);
 		return {
-			name: content.login,
+			name: content.name,
 			photo: content.avatar_url
 		}
 	}
@@ -64,24 +65,13 @@ var oauth2 = function(options, callback) {
 			callback(null, config[provider].getUserInfo(body))
 		});
 	}
-
+ 
 	
-	var callback = function(err, result) {
-		console.log(result)
-	}
-	
-	async.waterfall([readConfig, getToken, getUser], callback);
+	async.waterfall([readConfig, getToken, getUser], function(err, result) {
+		if(err) console.log(err)
+		callback(result);
+	});
 
-	return callback;
 }
-
-
-request.get('https://github.com/login/oauth/authorize?client_id=feebf3fa280163233841&redirect_uri=http://localhost:4200&scope=user&=test', function(err, res, body) {
-	if (err) return callback(err);
-	console.log(body);
-});
-
-
-
 
 module.exports = oauth2;

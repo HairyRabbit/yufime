@@ -6,7 +6,8 @@
 			"alias": "ember-cli_intro",
 			"date": "2014-10-15",
 			"intro": "一个ember-cli入手的超超简单教程，版本号是1.2.0",
-			"keywords": [1, 2]
+			"keywords": [1, 2],
+			"comments": [1]
 		}
 	]
 }
